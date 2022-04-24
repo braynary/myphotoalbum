@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Photo Album</title>
+<style>
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    background:gray;
+}
+nav{
+    background:#594848;
+    width:100%;
+    overflow:auto;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+li{
+    float:left;
+}
+nav a{
+    width:120px;
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    background: #594848
+    font-size:17px;
+    color:white;
+    padding:20px 10px;
+    font-family:Arial;
+}
+nav a:hover{
+    background:skyblue;
+    color:black;
+}
+.container{
+    max-width: 1200px;
+    margin:auto;
+    background: #f2f2f2;
+    overflow:auto;
+}
+.gallery{
+    margin:5px;
+    border:1px solid #ccc;
+    float:left;
+    width:390px;
+}
+.gallery img{
+    width:100%
+    height:auto;
+}
+.desc{
+    padding:15px;
+    text-align:center;
+}
+footer{
+    padding:10px;
+    font-size:17px;
+    font-weight:bold;
+    text-align:center;
+    background:#594848
+    color:white;
+    font-family:Arial;
+    letter-spacing:1px;
+
+}
+</style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="https://www.facebook.com/100002545662996/videos/1396173990477443/"> Home</a></li>
+        <li><a href="https://scontent.fceb6-1.fna.fbcdn.net/v/t31.18172-8/18700836_1362634813831361_6171635253493860466_o.jpg?_nc_cat=110&ccb=1-5&_nc_sid=19026a&_nc_ohc=jWKn064C1AMAX-zvR4j&tn=1q_K0IkajGYG-PhN&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9FDiM06ZVFliHMELmIqMbSfg2_GSIf5ELp2zH0NkutdQ&oe=6287351E"> Generations</a></li>
+        <li><a href="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/12294727_926659990762181_2768400231216283244_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=19026a&_nc_ohc=o1yBKbH2La4AX9Ttybt&_nc_ht=scontent.fceb2-2.fna&oh=00_AT_WP6dXkNCYFrvbGMPThPFIGF5ouCwBM7qj2enKBGZMig&oe=6286BABA"> Days </a></li>
+        <li><a href="https://scontent.fceb2-1.fna.fbcdn.net/v/t31.18172-8/18739161_1363296837098492_7987014410451261192_o.jpg?stp=dst-jpg_r270&_nc_cat=111&ccb=1-5&_nc_sid=19026a&_nc_ohc=-wdN19jvLcEAX-Moz7Y&_nc_ht=scontent.fceb2-1.fna&oh=00_AT8BHn2XdMb5zyoaQG7q1rDZJ9e19D3yL0bQsNWD-eHYXA&oe=62885F70"> Moments </a></li>
+        <li><a href="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/17523488_1314081105353399_2743885916816855098_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=19026a&_nc_ohc=l9Su4mNo_NwAX9rfE7S&_nc_ht=scontent.fceb2-2.fna&oh=00_AT8au5H6ka-msCtv_4dQKEokV5Fq9CPUmvFwr1Lmm3ioDg&oe=6287699A"> Gather</a></li>
+        <li><a href="https://www.facebook.com/100002545662996/videos/1405763276185181/"> Together</a></li>
+        <li><a href="https://scontent.fceb2-1.fna.fbcdn.net/v/t39.30808-6/258174777_4502746166479110_5713851430597299556_n.png?stp=dst-jpg&_nc_cat=106&ccb=1-5&_nc_sid=19026a&_nc_ohc=yRdXeN1tYSIAX_wT_-5&_nc_ht=scontent.fceb2-1.fna&oh=00_AT8sD6yYUqxPQM533JCIWq4ZXecFoaI3zpTcGUv_FNdTGw&oe=6265635E"> Family </a></li>
+        <li><a href="https://scontent.fceb2-2.fna.fbcdn.net/v/t31.18172-8/17016793_882953498513231_9165750489220851368_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=QMZfw8cRTDQAX_AJ_fB&_nc_ht=scontent.fceb2-2.fna&oh=00_AT8xsOUYYVDRQS6tLOkVMQ94JAacqOKv--jEB1ZzeH4AQg&oe=628778C4"> Us</a></li>
+        <li><a href="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/21271203_1457210437707131_6546143921220333236_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=19026a&_nc_ohc=zAcj8Z1e2tsAX_R5BrA&_nc_oc=AQkiYRCg31ntri0uSi1RDaz1VnbIrcQHrxPZe3kmr3clApx6cv7vqmzTunZo3J81zRA&tn=c1Zso2SEABziY_-H&_nc_ht=scontent.fceb2-2.fna&oh=00_AT9yGcwCXx0X96ueYJXAiK6IGsj6tLxRC8knMkLflIQaDA&oe=628705DC"> Celebrating</a></li>
+        <li><a href="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/72277099_2460073900754108_5471368154158465024_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=rxjfFXsoptwAX_4RWLu&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-TTUV1YAG4erd9zthpJLr69J3nfX5Vd-5TNzIo8J7uXw&oe=6284D4D0"> Adventures</a></li>
+    </ul>
+</nav> 
+<div class="container"> 
+    <div class="gallery">
+        <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/257648047_4502750863145307_4614837009600783890_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=e3f864&_nc_ohc=cXvQklm5SlwAX_AJM3x&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9HU8Iwo_Rmb4r0oCa6XILRGYaqb-JPs3mYNaYvA9ioYA&oe=6265F5CC" style="width:390px; height:320px">   
+        <div class="desc">Taking pictures with my family is the best time to bond together since 2016.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/20526173_1430953323666176_8008120409031722228_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=19026a&_nc_ohc=rAWLxxLyPPcAX95mv18&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-LLBnBq3eLIGiGRIehR4jcVp-sGHxXGCJ_c8Fxym7xfQ&oe=62874559"style="width:390px; height:320px">
+        <div class="desc">Spending quality time with my brothers and little sister by riding bus on the way to SM seaside since 2017. </div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t39.30808-6/271960126_4728520337242775_4899549453640690511_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_ohc=IkX6tWD6fb4AX-eFze0&_nc_ht=scontent.fceb2-1.fna&oh=00_AT-9lXjsRnnAPVJkKVue87YqRkwZVzYz_dyztE8Hh4fWrw&oe=6266A90C"style="width:390px; height:320px">
+        <div class="desc">Celebrating the 24th birthday of my elder brother this year 2022.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.18169-9/215446_101591679927936_2444194_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=dJbMQPpvs9IAX-Nbwgo&_nc_ht=scontent.fceb2-1.fna&oh=00_AT8TYNk-dJ_Ef9s9ZWAyt08YTTS_N-O2Q5HVNVMytPW3YA&oe=62876684"style="width:390px; height:320px">
+    <div class="desc">Throwback picture of me taken in Fort San Pedro in year 2011.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t31.18172-8/200991_101584583261979_654014_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=yAb73rY8QsQAX-e_PR9&_nc_ht=scontent.fceb2-2.fna&oh=00_AT8EtQC6jRoDRz4O5-2hujgbCKW_VcrGfKxEyDGUpn9rCA&oe=62876CFC"style="width:390px; height:320px">
+        <div class="desc">A quality time bond with my brothers watching some marvel movies in the laptop  photo taken in 2011.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/216286_101591499927954_7196453_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=kwWjeZa_z5gAX9MTM9-&_nc_ht=scontent.fceb2-2.fna&oh=00_AT-0wuP78oc2JL1NQ_hyfpjaLHhPftRdKJpfGZCgillQ8g&oe=62874A27"style="width:390px; height:320px">
+        <div class="desc">Me and my Mom bonding together near in Plaza Independencia since 2011.</div>
+</div>       
+<div class="gallery">
+     <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/222024_101582999928804_1343824_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=jYnlx3IpvX8AX_qgjIh&_nc_ht=scontent.fceb2-2.fna&oh=00_AT_2Ry7MgZdzAwhdoY4hEYZ4ehDDRD41LHzgLnaGcw_jaA&oe=62852E1B"style="width:390px; height:320px">
+         <div class="desc">Jogging with my dad and brothers at the back of the Immacculate near in ayala since 2011.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t31.18172-8/219166_101583333262104_4047534_o.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=TO2GObwJQD4AX-zXqfc&_nc_ht=scontent.fceb2-2.fna&oh=00_AT84wW41YV0HqdR5rASD_ip22Orrxus4k5MoxD0grq0Gzw&oe=6284B373"style="width:390px; height:320px">
+        <div class="desc">A picture of family and my Grandma who always been here with me photo taken in 2011.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.18169-9/221890_101593653261072_1230583_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=L6TpHaRr6NYAX83-MOr&_nc_ht=scontent.fceb2-2.fna&oh=00_AT_gdIrkwO9nbvlq4EBPmCrI9-OzFz9AFluF8cTQ4GkQ-w&oe=6287580D"style="width:390px; height:320px">
+        <div class="desc">Picture taken in Taoist Temple with my grandma,grandpa,mother and uncle since 2011.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/527761_428627547232097_542229417_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=zG0BO9oxVzsAX8ajVx0&_nc_ht=scontent.fceb6-1.fna&oh=00_AT89U7LgCkNjogtgUGiFOV0FsZpxysCmr867uwu2MadlDQ&oe=62896545"style="width:390px; height:320px">
+        <div class="desc">Picture taken in 2013 Graduation.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/246459_428627940565391_1315612949_n.jpg?stp=dst-jpg_r90&_nc_cat=106&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=ni91bhD6zSwAX8jcagm&tn=c1Zso2SEABziY_-H&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8eo7SmVQ74TcfEWU7Ralkce4Btd0vUb2Xh0EOZDeR8Ew&oe=6286E2B3"style="width:390px; height:320px">
+        <div class="desc">Taken in 2013 Grad with my Grandma,Kuya and niece.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/734057_428625910565594_336838376_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=YPZ5XgMbte8AX_SKxTM&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8i-V7pGhIMhDlrkg4RrHc422rHQsty2uBWY_Cgkm24-A&oe=62874818"style="width:390px; height:320px">
+        <div class="desc">Picture taken in 2013 Graduation with my Ate Yang.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/549991_428625567232295_251003491_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=kh2OrcsSxxMAX9PlfDY&tn=04bjb7uAtoWf-DNx&_nc_ht=scontent.fceb6-1.fna&oh=00_AT90ktZNHvLgt853vd3vVAXu0YLebFgQINKBGbzbsT5_3Q&oe=628949C0"style="width:390px; height:320px">
+        <div class="desc">Picture taken in 2013 Graduation with my Classmates.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/575425_407838385977680_688393651_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=6tDkbWW0b8QAX9O-hh9&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9z2lDDyktjlXsr8X_Qnn1nl6JwC8RNav_iBS8s4WC6PA&oe=62885FD6"style="width:390px; height:320px">
+        <div class="desc">Picture taken when I'm about to see the beach.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/481434_407839232644262_1049297292_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=dVextpnxSC0AX_hyS-A&_nc_ht=scontent.fceb6-1.fna&oh=00_AT91YIcUXZO8PrZKeDPz_cfQlkU6nJZQ9uGSC2eNAF7AxQ&oe=6287AC57"style="width:390px; height:320px">
+        <div class="desc">Picture taken with my niece.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/532057_407838409311011_521796109_n.jpg?stp=dst-jpg_r90&_nc_cat=105&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=GlRZm9ZUijkAX9ye91F&_nc_ht=scontent.fceb6-1.fna&oh=00_AT952cD0H6PHskSfQ07M6ZsXvV6fzSofGkpDv-0Csz_IDA&oe=628946B4"style="width:390px; height:320px">
+        <div class="desc">Walking around the beach with my niece.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/72972_407840995977419_1558885481_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=T9zHiwGOgFkAX8By6yX&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9hoemZGOW-i0ZmdIWWRXwOatt7z4-cCYdVhcLe5ui2qA&oe=62878E45"style="width:390px; height:320px">
+        <div class="desc">Swimming with my brother.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/529400_407838929310959_1260199042_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=ddcfGAEsRg4AX8HzDIE&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-5yqT8L29o-DoXKsxSg06cFiZX6Xsf81P1ruVeRMJhuA&oe=62882D0E"style="width:390px; height:320px">
+        <div class="desc">Swam in the beach with my brother and niece.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/66182_407838859310966_213372994_n.jpg?stp=dst-jpg_r90&_nc_cat=106&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=RvMMYidz7OsAX94221P&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8scEwzyQ1cvJCjayBjMu-KWnv6U2lpjZ5FPWlC3Vu1Ug&oe=6287252E"style="width:390px; height:320px">
+        <div class="desc">Picture taking with my Ate Yang around the beach.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/1526502_581355041959346_733599281_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Df2aPjg9eDYAX_VbIMR&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8PyIlcAH5W-9hCvYyyQUfzV70f-A0RKrUlq2LpMaE2CA&oe=6287305B"style="width:390px; height:320px">
+        <div class="desc">Picture taking with my Ate Yang and Grandma.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/1016548_581356248625892_1441795954_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=bkBUnyFqS90AX_PZV4T&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8Tc25HZuSgkY9UW-jFIpi1d838LQCOvz55OHT1FwO8HQ&oe=628799F4"style="width:390px; height:320px">
+        <div class="desc">Stamps before entering the Fort San Pedro.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/58166_581356935292490_591792499_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=XIgnUFDDgtgAX89KDaG&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9lDP1pSLeK3LO1cXKI8ZHVsA--qqnjSDukb3Mp7tOySQ&oe=6289545E"style="width:390px; height:320px">
+        <div class="desc">Picture taken inside the Fort San Pedro.</div>
+</div> 
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/1509907_581358185292365_955219239_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Ub0J5B79IdAAX-dQ66N&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-xajpPTxB5saQrv0ZI1wR8jKqT2L5ro7XSnTEY0BKTwQ&oe=62873365"style="width:390px; height:320px">
+        <div class="desc">Picture taken above the Fort San Pedro .</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/484802_581360515292132_575739608_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=rXO8W8stR-4AX-D80Px&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8jhYQzp23dmkUuvWmeUBzL_OpNcels6jLQxM2LC5ffhA&oe=6289D3EA"style="width:390px; height:320px">
+        <div class="desc">Picture taken around the grass of Fort San Pedro .</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/1016705_581360008625516_1783967055_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=whmXw_LXGM0AX96RviB&_nc_ht=scontent.fceb6-1.fna&oh=00_AT_3E5xGBZwESYJGfLv74Sgi8Z4WUVLOyoKpJaQ7qOOO4g&oe=62868F6B"style="width:390px; height:320px">
+        <div class="desc">After we left Fort San Pedro .</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/75871_581360398625477_641699066_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Kr6cKur-7zsAX9c07Cu&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9M7jN069QmNT7YAb6NBorCRPe0udBkjHr5BZIZiKCyRA&oe=62899CD4"style="width:390px; height:320px">
+        <div class="desc">Post kahit nahihirapan.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/1530352_581358738625643_1586245391_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=R3H3OGxL_YIAX_H4BuQ&_nc_ht=scontent.fceb6-1.fna&oh=00_AT_rfC-9lrLecrtVRj-olecOghrdnenKtsvFcq2gF14yGw&oe=6288F03B"style="width:390px; height:320px">
+        <div class="desc">Sit post at canyon.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/12705303_1069070473135642_4768740481061423190_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=5GbYdMa6KTMAX8EaRRG&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-1JxFF3bLtS2SzsLc0r0Kn9e3rwTDgzp7LLquQq7J6jQ&oe=62896831"style="width:390px; height:320px">
+        <div class="desc">High School is cool days.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/12814714_545155128979954_3469694431420871290_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=2bnpNsxDUQEAX-XZXfl&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9cyQm6H5L5ReQFF8D4a9mJs_oakiB2YsEqTgYxUqNp4Q&oe=62887703"style="width:390px; height:320px">
+        <div class="desc">High School Friends.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/969197_466112953483556_382801283_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=iDNdwG-fq70AX8c-pAt&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8odZ1PbogAkQ1Hw8noLwZgvYaUHs9X12Cw35sNY6f8Ew&oe=6287B1FE"style="width:390px; height:320px">
+        <div class="desc">1st time Airplane mode in May 26, 2013.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t34.18173-12/11940235_889157194512461_917138202_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=4HuA7z98a38AX-6viic&_nc_oc=AQmTHY5U4ihjnqQ1zZw5MYBf0Ip7jbatn_CTHrNd4J_6p-fjP-C52HygdLvDJIg2zZk&tn=04bjb7uAtoWf-DNx&_nc_ht=scontent.fceb6-1.fna&oh=00_AT--Wibj0rLGKJHoAdYnfmUmRnbVQuGMv0Iw8nn7e_Gipw&oe=6264202F"style="width:390px; height:320px">
+        <div class="desc">High School Crushing you.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t31.18172-8/11221440_860455044042371_4382188397919922624_o.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=Ht-A9V_HcaEAX9_O9E5&_nc_oc=AQl1pnjdzXaeckN1ZPbUbqclgqdCn8tf8qOG4d410eLblP0lmCLb01Xc1NcPLySZnGM&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8mvasEXJHVTNew1dpBfzWN2iH_pLQzwGiRilrnWk043Q&oe=6287DD6D"style="width:390px; height:320px">
+        <div class="desc">High School IDOL.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/1974996_832291560186727_8986762873053322158_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=19026a&_nc_ohc=uE7xGVhoYsoAX_DEB7i&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8Rf5mjgqgO64onhA4J1axzUZRaLCqgO3rsKniDruSl-Q&oe=6286B191"style="width:390px; height:320px">
+        <div class="desc">High School Batch 2016.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/10478221_10152452598059720_831103521062247840_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ba80b0&_nc_ohc=N6FlOBmR2G0AX9R5kYu&_nc_ht=scontent.fceb6-1.fna&oh=00_AT_iIVRFdpk_cmrGujUamg2ei4jMUW8dIyW64esrZu0VlA&oe=6288BB39"style="width:390px; height:320px">
+        <div class="desc">Practice Biking with Kuya Kenn.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t34.18173-12/11291807_10153310868109720_2060086294_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=ba80b0&_nc_ohc=f_28eVAwhiQAX9paHG9&_nc_ht=scontent.fceb6-1.fna&oh=00_AT_CEd39e-Qlv1lqasuiiY2HgXb9wjqiz-BOMhu7nSWTVA&oe=626477B0"style="width:390px; height:320px">
+        <div class="desc">Jam with my brother and father.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/83179017_1073779939459318_1221258969771671552_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=ILxwEyXfedcAX8_ZnTw&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8l52qu5_QONm1TifZY949oBbDx1Lnror6gJyBPxSr8mw&oe=62896827"style="width:390px; height:320px">
+        <div class="desc">Jam with my NSTP classmates since 2020.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/90437081_2805593412868820_4168522350704197632_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=xUky_igvZR0AX-sjqVf&_nc_ht=scontent.fceb6-1.fna&oh=00_AT81f85pPZjhvbSIsa_Pu_UCEZBwK-0ymgl5ZBoNU80LDw&oe=6287156B"style="width:390px; height:320px">
+        <div class="desc">Taking pictures with her.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/271662890_4700369040057905_4183659091598992454_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YkQqAVqwNJYAX_3D9Fu&_nc_oc=AQnTmBcNJeenVlIF-LEIS-CvNhWNSqryrJZXNLz64l7B_xCK1cJR0LRXG9t4OdzYY5I&_nc_ht=scontent.fceb6-1.fna&oh=00_AT_1u3-vG6t0iDircZKMW9uXekvroAJMlrmiksL_n3b1ow&oe=62671B9B"style="width:390px; height:320px">
+        <div class="desc">Halo-halo with her.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/79719739_2598378976923599_7125413317442535424_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=HCBUZ7KNWbQAX9VPZX5&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9lUSfX2wNPwPx4d4OWVD5FTfHdUo4AIHe-qWkO3T2-Lw&oe=6286A86A"style="width:390px; height:320px">
+        <div class="desc">Senior High School classmates batch 2019.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/73087563_2414540528813227_4699780131290349568_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=0debeb&_nc_ohc=PDNEE4MW1SgAX9OlJjB&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-GUzNgeDVZoptdkk0yaNhJiFaFIct7S8E31acktG_Hiw&oe=6288A4F5"style="width:390px; height:320px">
+        <div class="desc">First Year classmates batch 2020.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/72550242_2415847558682524_6704484089820348416_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=0debeb&_nc_ohc=Zp4KpzlDN9YAX9w7Sgr&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-TbwuS5N5rNwKBHgvUClAViJE97nmxvBcBB1FieRGBpQ&oe=62875A6C"style="width:390px; height:320px">
+        <div class="desc">1st Year classmates batch 2020.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/72927782_1226550084212373_7926503036875177984_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=3CE_ZBzxlyYAX-SFVBX&_nc_ht=scontent.fceb6-1.fna&oh=00_AT_-y-OFL2fZWOnf5_f6JkH9l6FUwAl8B7EQ_ABf4nhfQA&oe=6289FA02"style="width:390px; height:320px">
+        <div class="desc">Batch 2018-2019 SHS Graduates.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/18767948_1362132740548235_875897755323566423_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=174925&_nc_ohc=1LdKaEhMRtIAX-8lWBo&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-5C4f7g79aHG3RC9EFBfXqKGNZoH4KS7Kej4kLOUzO6Q&oe=6289B914"style="width:390px; height:320px">
+        <div class="desc">Compostela Valley swimming pool.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/30727985_1813288855381173_3512159822122319872_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=cXYgRdFPTyoAX-RsoVm&_nc_ht=scontent.fceb6-1.fna&oh=00_AT__AqhmAI3b5HX0H-tm8Bf4sg9-PavYk2pktma3EaMj1g&oe=62887F88"style="width:390px; height:320px">
+        <div class="desc">Trip to Masao Road.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/82810717_2664523540309142_578573000039727104_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=174925&_nc_ohc=JxC94S7j6k4AX__8-Sf&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8dESGN60Y3LAO8Towa0-f_glrBOo2neyJbBN5rTwozrQ&oe=628954F3"style="width:390px; height:320px">
+        <div class="desc">Lightning miracle in Sto.Niño.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/72277099_2460073900754108_5471368154158465024_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=rxjfFXsoptwAX_4RWLu&_nc_ht=scontent.fceb6-1.fna&oh=00_AT-AR2GfEQ_aSPZRoGgPYL88U59EedVQI1oqfPuaseAIBA&oe=6288C950"style="width:390px; height:320px">
+        <div class="desc">Paradise of Masao.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/71537953_2457953534299478_412168653979516928_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=174925&_nc_ohc=7a6EGajhyhAAX_vLJew&_nc_ht=scontent.fceb6-1.fna&oh=00_AT83H7BtY0wp6tc1gu3vcDYL1CLEM0Do-wrw0TM9ymmtuA&oe=62896A12"style="width:390px; height:320px">
+        <div class="desc">Candid captured by classmate.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/71968715_2457938617634303_4302248090200440832_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=c0eyOObsj4sAX8yOK-U&_nc_ht=scontent.fceb6-1.fna&oh=00_AT_EQNfYi8_JMQoZ8iH5nQeXQYkAYTo0W6H3bC9o_U8QpA&oe=6288795F"style="width:390px; height:320px">
+        <div class="desc">Ngiti lang kahit nahihirapan maghanap ng litrato ok.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.6435-9/29366365_1646533975441442_1204535677086072832_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=174925&_nc_ohc=-TEOWsZpHckAX-rZoN7&tn=04bjb7uAtoWf-DNx&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8AIHwG8mYM8O6OxmjfIbOZ1UjZeVeIiR2OHKS_Nb235w&oe=628717AF"style="width:390px; height:320px">
+        <div class="desc">Selfie before seeing my teacher at the corridor.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t31.18172-8/18815419_1364880300273479_4626085109083465728_o.jpg?_nc_cat=108&ccb=1-5&_nc_sid=174925&_nc_ohc=Thb-PANXNRkAX-sNYUa&_nc_ht=scontent.fceb6-1.fna&oh=00_AT8cQJllEIlc6fzbaVNEyDF5BodZ04v4u6MdxyA1-tR5Vg&oe=62896EA1"style="width:390px; height:320px">
+        <div class="desc">Hugas is to wash a way your sins.</div>
+</div>
+<div class="gallery">
+    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.18169-9/18275121_1345021805592662_172633809211296704_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=TM7BLJHRfjUAX9TRvN3&_nc_ht=scontent.fceb6-1.fna&oh=00_AT9YYRSxpeFI_qgHO-8890VMIRkLaL4ywrGP49UnQyxC1w&oe=628930AF"style="width:390px; height:320px">
+        <div class="desc">At the wellcome hotel drowning my anxiety illness.</div>
+</div>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width",initial-scale=1.
+    0">
+    <title>My Photo Album</title>
+    <!--CUSTOM CSS-->
+    <link rel="styleshoot" href="style.css">
+</head>
+<body>
+    
+<input type="radio" name="Photos" id="check1" checked>
+<input type="radio" name="Photos" id="check2" checked>
+<input type="radio" name="Photos" id="check3" checked>
+<input type="radio" name="Photos" id="check4" checked>
+<input type="radio" name="Photos" id="check5" checked>
+
+<div class="container">
+    <h1>OUR PHOTO GALLERY</h1>
+    <div class="top-content">
+        <h3>Photo Gallery</h3>
+        <label for="">All Photos</label>
+        <label for="">Family Photos</label>
+        <label for="">Child Photos</label>
+        <label for="">Visited Photos</label>
+        <label for="">Clan Photos</label>
+</div>
+
+<ul>
+    <li><a href="file:///C:/Users/Brian%20Ray%20Go/Documents/HTML/page_%231.html"> [page1]</a></li>
+    <li><a href="file:///C:/Users/Brian%20Ray%20Go/Documents/HTML/page_%232.html"> [page2]</a></li>
+    <li><a href="file:///C:/Users/Brian%20Ray%20Go/Documents/HTML/page_%233.html"> [page3]</a></li>
+    <li><a href="file:///C:/Users/Brian%20Ray%20Go/Documents/HTML/page_%234.html"> [page4]</a></li>
+    <li><a href="file:///C:/Users/Brian%20Ray%20Go/Documents/HTML/page_%235.html"> [page5]</a></li>
+</ul>
+<footer>
+All Rights Reserved Web Master    
+</footer>        
+</body>
+</html>
